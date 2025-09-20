@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de estudantes</title>
+</head>
+<body>
+  <script>
+    let estudantes = []; 
+    while (true) {
+      let nome = prompt("Digite o nome do estudante (ou PARE para finalizar):");
+
+      if (nome.toUpperCase() === "PARE") {
+        break;
+      }
+
+      if (nome.trim() !== "") {
+        estudantes.push(nome);
+      } else {
+        alert("Nome inválido! Digite novamente.");
+      }
+    }
+
+    document.write("<h2>Quantidade de estudantes cadastrados: " + estudantes.length + "</h2>");
+    document.write("<ul>");
+    for (let i = 0; i < estudantes.length; i++) {
+      document.write("<li>" + estudantes[i] + "</li>");
+    }
+    document.write("</ul>");
+     </script>
+</body>
+</html>

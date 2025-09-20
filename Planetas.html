@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Planetas</title>
+</head>
+<body>
+  <script>
+    let planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+
+    let planetaUsuario = prompt("Digite o nome de um planeta:");
+
+    let planetaFormatado = planetaUsuario.trim().toLowerCase();
+
+    let encontrado = planetas.some(p => p.toLowerCase() === planetaFormatado);
+
+    if (encontrado) {
+      alert("O planeta " + planetaUsuario + " está na lista!");
+    } else {
+      alert("O planeta " + planetaUsuario + " NÃO está na lista!");
+    }
+     </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Frutas</title>
+</head>
+<body>
+  <script>
+    let frutas = ["Maçã", "Banana", "Laranja", "Uva", "Manga", "Morango", "Tomate", "Ameixa"];
+
+    while (frutas.length > 0) {
+      alert("Lista atual de frutas: " + frutas.join(", "));
+
+      let frutaUsuario = prompt("Digite o nome de uma fruta para remover:").trim();
+
+      let indice = frutas.findIndex(f => f.toLowerCase() === frutaUsuario.toLowerCase());
+
+      if (indice !== -1) {
+    
+        frutas.splice(indice, 1);
+        alert("Fruta foi retirada da lista");
+      } else {
+        alert("Fruta indisponível no nosso mercado");
+      }
+    }
+
+    alert("Lista de compras finalizada");
+    </script>
+</body>
+</html>
